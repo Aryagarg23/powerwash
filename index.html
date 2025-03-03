@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn Powerwash - Simple 3-Step Cleaning</title>
+    <style>
+        :root {
+            --primary-color: #0074c8;
+            --secondary-color: #8cc63f;
+            --accent-color: #ffd500;
+            --dark-color: #333333;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 116, 200, 0.8), rgba(0, 116, 200, 0.8)), url('/api/placeholder/1200/600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .steps-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .step-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 320px;
+            transition: transform 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .step-content {
+            padding: 1.5rem;
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .step-description {
+            margin-bottom: 1rem;
+        }
+        
+        .step-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .tips-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+        }
+        
+        .tip-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .tip-card {
+            background-color: white;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            max-width: 350px;
+        }
+        
+        .tip-title {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: white;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .social-link {
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Dawn Powerwash</div>
+            <div class="tagline">Spray, Wipe, Done.</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Easy Cleaning in Just 3 Steps</h1>
+            <p>Dawn Powerwash Dish Spray's innovative formula makes cleaning dishes quicker and easier than ever before. No more soaking. No more scrubbing. Just spray, wipe, and rinse.</p>
+        </div>
+    </section>
+    
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="section-title">How to Use Dawn Powerwash</h2>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">Step 1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Spray</h3>
+                        <div class="step-image">
+                            <img src="/api/placeholder/300/180" alt="Spraying dishes with Dawn Powerwash">
+                        </div>
+                        <p class="step-description">Simply spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with water and begins to break down tough food residues instantly.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">Step 2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Wipe</h3>
+                        <div class="step-image">
+                            <img src="/api/placeholder/300/180" alt="Wiping dishes with a sponge">
+                        </div>
+                        <p class="step-description">Using a sponge or dishcloth, wipe the surface of your dishes. The powerful formula helps cut through grease and stuck-on food with minimal effort.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">Step 3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Rinse</h3>
+                        <div class="step-image">
+                            <img src="/api/placeholder/300/180" alt="Rinsing clean dishes">
+                        </div>
+                        <p class="step-description">Rinse your dishes with clean water to remove the soap and any remaining food particles. Your dishes will be sparkling clean and ready to use again!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tips-section">
+        <div class="container">
+            <h2 class="section-title">Pro Tips for Best Results</h2>
+            <div class="tip-cards">
+                <div class="tip-card">
+                    <h3 class="tip-title">For Tough Grease</h3>
+                    <p>For extra greasy pots and pans, spray and let sit for 1-2 minutes before wiping to give the powerful formula time to break down stubborn grease.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3 class="tip-title">Burnt-on Food</h3>
+                    <p>For burnt-on food, spray generously, let sit for 5 minutes, then wipe. For extremely stubborn residue, you may need to repeat the process.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3 class="tip-title">Save on Refills</h3>
+                    <p>Purchase Dawn Powerwash refill bottles to easily refill your spray bottle. It's more economical and better for the environment!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Dishwashing Experience?</h2>
+            <a href="#" class="cta-button">Find Dawn Powerwash Near You</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">FB</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link">TW</a>
+                <a href="#" class="social-link">YT</a>
+            </div>
+            <p>&copy; 2025 Procter & Gamble. All rights reserved.</p>
+            <p>Dawn and Dawn Powerwash are registered trademarks.</p>
+        </div>
+    </footer>
+</body>
+</html>
