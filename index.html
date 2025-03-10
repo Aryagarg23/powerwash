@@ -11,6 +11,7 @@
             --accent-color: #ffd500;
             --dark-color: #333333;
             --light-color: #f8f9fa;
+            --insight-color: #29ABE2;
         }
         
         * {
@@ -201,6 +202,71 @@
             background-color: white;
         }
         
+        /* New Insights Section */
+        .insights-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .insights-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .insight-card {
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid var(--primary-color);
+            padding: 1.5rem;
+            width: calc(33.333% - 1rem);
+            min-width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .insight-title {
+            color: var(--insight-color);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .insight-description {
+            color: var(--dark-color);
+            font-size: 1rem;
+        }
+        
+        .difference-highlight {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-left: 5px solid var(--insight-color);
+        }
+        
+        .difference-highlight h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .difference-highlight p {
+            font-size: 1.1rem;
+        }
+        
+        .important-note {
+            display: inline-block;
+            background-color: #FFF7D8;
+            border-left: 4px solid var(--accent-color);
+            padding: 0.8rem 1.2rem;
+            margin: 1rem 0;
+            font-weight: 500;
+            border-radius: 0 5px 5px 0;
+        }
+        
         /* Enhanced Mobile Responsiveness */
         @media screen and (max-width: 768px) {
             .container {
@@ -255,8 +321,17 @@
                 max-width: 100%;
             }
             
-            .steps-section, .tips-section {
+            .steps-section, .tips-section, .insights-section {
                 padding: 2.5rem 0;
+            }
+            
+            .insight-card {
+                width: 100%;
+                min-width: 0;
+            }
+            
+            .insight-title {
+                font-size: 1.2rem;
             }
         }
         
@@ -298,6 +373,23 @@
             .tip-card {
                 padding: 1.2rem;
             }
+            
+            .insight-card {
+                padding: 1.2rem;
+            }
+            
+            .difference-highlight {
+                padding: 1.2rem;
+                margin-top: 2rem;
+            }
+            
+            .difference-highlight h3 {
+                font-size: 1.2rem;
+            }
+            
+            .difference-highlight p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -319,6 +411,10 @@
     <section class="steps-section">
         <div class="container">
             <h2 class="section-title">How to Use Dawn Powerwash</h2>
+            <div class="difference-highlight">
+                <h3>This Is Different From Regular Dish Soap</h3>
+                <p>Dawn Powerwash works differently than liquid dish soap. For best results, follow these simple steps.</p>
+            </div>
             <div class="steps">
                 <div class="step-card">
                     <div class="step-number">Step 1</div>
@@ -327,7 +423,8 @@
                         <div class="step-image">
                             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGxucWducnU4ZG9vZGd0M20yYndkdGcwbGQwamdpOW0wcmJzam01bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eWnl9xcJuxIprRqobD/giphy.gif" alt="Spraying dishes with Dawn Powerwash">
                         </div>
-                        <p class="step-description">Simply spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with stains and begins to break down tough food residues instantly. Cuts grease better when applied dry.</p>
+                        <p class="step-description"><strong>Apply to dry dishes first</strong> - Spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with stains and begins to break down tough food residues instantly.</p>
+                        <div class="important-note">For best results, apply to dry dishes before adding water.</div>
                     </div>
                 </div>
                 
@@ -338,7 +435,8 @@
                         <div class="step-image">
                             <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExanM3OW8yZDlreDhwdXpwMXk3Y21hdmgzYmlrMzIyZGQ1NXNzZWF2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rh8Wj4jIkVG7rqnNnl/giphy.gif" alt="Wiping dishes with a sponge">
                         </div>
-                        <p class="step-description">Using a sponge or dishcloth, wipe the surface of your dishes. The powerful formula helps cut through grease and stuck-on food with minimal effort.</p>
+                        <p class="step-description"><strong>Wipe, don't scrub</strong> - Using a sponge or dishcloth, gently wipe the surface of your dishes. The powerful formula helps cut through grease with minimal effort.</p>
+                        <div class="important-note">Remember to wipe, not scrub - let the formula do the work!</div>
                     </div>
                 </div>
                 
@@ -356,6 +454,28 @@
         </div>
     </section>
     
+    <section class="insights-section">
+        <div class="container">
+            <h2 class="section-title">Why Dawn Powerwash Is Different</h2>
+            <div class="insights-container">
+                <div class="insight-card">
+                    <h3 class="insight-title">Not Just Regular Soap in a New Bottle</h3>
+                    <p class="insight-description">Dawn Powerwash is specially formulated to be sprayed directly on dishes, activating instantly without water dilution for superior grease-cutting power.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">5X Faster Grease Cutting</h3>
+                    <p class="insight-description">Experience the difference when you use as directed. Our spray formula tackles tough grease in seconds when applied correctly.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">New Method, Better Results</h3>
+                    <p class="insight-description">Unlike traditional dish soap that works with water, Dawn Powerwash is designed to work on contact, changing how you clean dishes for better efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="tips-section">
         <div class="container">
             <h2 class="section-title">Pro Tips for Best Results</h2>
@@ -366,13 +486,13 @@
                 </div>
                 
                 <div class="tip-card">
-                    <h3 class="tip-title">Burnt-on Food</h3>
-                    <p>For burnt-on food, spray generously, let sit for 5 minutes, then wipe. For extremely stubborn residue, you may need to repeat the process.</p>
+                    <h3 class="tip-title">Remember: Wipe, Don't Scrub</h3>
+                    <p>Many consumers mistake wiping for scrubbing. Wiping requires gentle, light pressure - let the formula do the work. Scrubbing is not necessary!</p>
                 </div>
                 
                 <div class="tip-card">
-                    <h3 class="tip-title">Save on Refills</h3>
-                    <p>Purchase Dawn Powerwash refill bottles to easily refill your spray bottle. It's more economical and better for the environment!</p>
+                    <h3 class="tip-title">Apply to Dry Dishes First</h3>
+                    <p>Always spray Dawn Powerwash on dry dishes first for maximum effectiveness. The formula works best when not diluted with water initially.</p>
                 </div>
             </div>
         </div>
