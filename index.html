@@ -127,19 +127,21 @@
         
         .step-image {
             width: 100%;
-            height: 180px;
-            background-color: #f0f0f0;
+            height: 240px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
             overflow: hidden;
+            background-color: #f0f0f0;
+            position: relative;
         }
         
         .step-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            display: block;
         }
         
         .tips-section {
@@ -197,41 +199,6 @@
             background-color: white;
         }
         
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        footer p {
-            margin-bottom: 1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .social-link {
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary-color);
-        }
-        
         @media screen and (max-width: 768px) {
             .steps {
                 flex-direction: column;
@@ -274,7 +241,7 @@
                         <div class="step-image">
                             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGxucWducnU4ZG9vZGd0M20yYndkdGcwbGQwamdpOW0wcmJzam01bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eWnl9xcJuxIprRqobD/giphy.gif" alt="Spraying dishes with Dawn Powerwash">
                         </div>
-                        <p class="step-description">Simply spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with stains and begins to break down tough food residues instantly. Cuts grease better when dishes are dry.</p>
+                        <p class="step-description">Simply spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with water and begins to break down tough food residues instantly. Cuts grease better when applied dry.</p>
                     </div>
                 </div>
                 
