@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawn Powerwash - Simple 3-Step Cleaning</title>
+    <title>Dawn Powerwash - Effortless Cleaning</title>
     <style>
         :root {
             --primary-color: #0074c8;
@@ -160,18 +160,69 @@
         
         .tip-card {
             background-color: white;
-            border-left: 4px solid var(--secondary-color);
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             max-width: 350px;
             width: 100%;
         }
         
         .tip-title {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
             font-size: 1.2rem;
+        }
+        
+        .subtle-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.5rem;
+            background-color: rgba(0, 116, 200, 0.1);
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .experience-section {
+            padding: 4rem 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .experience-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-description {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            max-width: 300px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .feature-title {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
         }
         
         .cta-section {
@@ -200,71 +251,6 @@
         
         .cta-button:hover {
             background-color: white;
-        }
-        
-        /* New Insights Section */
-        .insights-section {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .insights-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-        
-        .insight-card {
-            background-color: white;
-            border-radius: 15px;
-            border: 3px solid var(--primary-color);
-            padding: 1.5rem;
-            width: calc(33.333% - 1rem);
-            min-width: 300px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .insight-title {
-            color: var(--insight-color);
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .insight-description {
-            color: var(--dark-color);
-            font-size: 1rem;
-        }
-        
-        .difference-highlight {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            text-align: center;
-            border-left: 5px solid var(--insight-color);
-        }
-        
-        .difference-highlight h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        
-        .difference-highlight p {
-            font-size: 1.1rem;
-        }
-        
-        .important-note {
-            display: inline-block;
-            background-color: #FFF7D8;
-            border-left: 4px solid var(--accent-color);
-            padding: 0.8rem 1.2rem;
-            margin: 1rem 0;
-            font-weight: 500;
-            border-radius: 0 5px 5px 0;
         }
         
         /* Enhanced Mobile Responsiveness */
@@ -317,21 +303,12 @@
                 max-width: 90%;
             }
             
-            .tip-card {
+            .tip-card, .feature-card {
                 max-width: 100%;
             }
             
-            .steps-section, .tips-section, .insights-section {
+            .steps-section, .tips-section, .experience-section {
                 padding: 2.5rem 0;
-            }
-            
-            .insight-card {
-                width: 100%;
-                min-width: 0;
-            }
-            
-            .insight-title {
-                font-size: 1.2rem;
             }
         }
         
@@ -358,37 +335,16 @@
                 font-size: 0.95rem;
             }
             
-            .tip-title {
+            .tip-title, .feature-title {
                 font-size: 1.1rem;
             }
             
-            .hero {
+            .hero, .cta-section {
                 padding: 2.5rem 0;
             }
             
-            .cta-section {
-                padding: 2.5rem 0;
-            }
-            
-            .tip-card {
+            .tip-card, .feature-card {
                 padding: 1.2rem;
-            }
-            
-            .insight-card {
-                padding: 1.2rem;
-            }
-            
-            .difference-highlight {
-                padding: 1.2rem;
-                margin-top: 2rem;
-            }
-            
-            .difference-highlight h3 {
-                font-size: 1.2rem;
-            }
-            
-            .difference-highlight p {
-                font-size: 1rem;
             }
         }
     </style>
@@ -403,18 +359,14 @@
     
     <section class="hero">
         <div class="container">
-            <h1>Easy Cleaning in Just 3 Steps</h1>
-            <p>Dawn Powerwash Dish Spray's innovative formula makes cleaning dishes quicker and easier than ever before. No more soaking. No more scrubbing. Just spray, wipe, and rinse.</p>
+            <h1>Effortless Cleaning in 3 Simple Steps</h1>
+            <p>Dawn Powerwash Dish Spray makes cleaning dishes quicker and easier. No more soaking or scrubbing. Just spray, wipe, and rinse.</p>
         </div>
     </section>
     
     <section class="steps-section">
         <div class="container">
-            <h2 class="section-title">How to Use Dawn Powerwash</h2>
-            <div class="difference-highlight">
-                <h3>This Is Different From Regular Dish Soap</h3>
-                <p>Dawn Powerwash works differently than liquid dish soap. For best results, follow these simple steps.</p>
-            </div>
+            <h2 class="section-title">The Dawn Powerwash Experience</h2>
             <div class="steps">
                 <div class="step-card">
                     <div class="step-number">Step 1</div>
@@ -423,8 +375,8 @@
                         <div class="step-image">
                             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGxucWducnU4ZG9vZGd0M20yYndkdGcwbGQwamdpOW0wcmJzam01bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eWnl9xcJuxIprRqobD/giphy.gif" alt="Spraying dishes with Dawn Powerwash">
                         </div>
-                        <p class="step-description"><strong>Apply to dry dishes first</strong> - Spray Dawn Powerwash directly onto your dirty dishes. The spray activates on contact with stains and begins to break down tough food residues instantly.</p>
-                        <div class="important-note">For best results, apply to dry dishes before adding water.</div>
+                        <span class="subtle-tag">Pro Tip</span>
+                        <p class="step-description">The spray works best on dry dishes, instantly activating to break down tough residues on contact.</p>
                     </div>
                 </div>
                 
@@ -435,8 +387,8 @@
                         <div class="step-image">
                             <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExanM3OW8yZDlreDhwdXpwMXk3Y21hdmgzYmlrMzIyZGQ1NXNzZWF2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rh8Wj4jIkVG7rqnNnl/giphy.gif" alt="Wiping dishes with a sponge">
                         </div>
-                        <p class="step-description"><strong>Wipe, don't scrub</strong> - Using a sponge or dishcloth, gently wipe the surface of your dishes. The powerful formula helps cut through grease with minimal effort.</p>
-                        <div class="important-note">Remember to wipe, not scrub - let the formula do the work!</div>
+                        <span class="subtle-tag">Time Saver</span>
+                        <p class="step-description">A gentle wipe is all it takes. The formula's 5X faster grease-cutting power means less effort for you.</p>
                     </div>
                 </div>
                 
@@ -447,30 +399,33 @@
                         <div class="step-image">
                             <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RmcDZpOGpocHlmcDNlY2wwaWdxaDBrdzBuN2NiMG1xOHl6OHA1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12o0tOMUPNozPG/giphy.gif" alt="Rinsing clean dishes">
                         </div>
-                        <p class="step-description">Rinse your dishes with clean water to remove the soap and any remaining food particles. Your dishes will be sparkling clean and ready to use again!</p>
+                        <span class="subtle-tag">Spotless Finish</span>
+                        <p class="step-description">A quick rinse reveals spotless, gleaming dishes ready to use again. No water spots, no residue.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="insights-section">
+    <section class="experience-section">
         <div class="container">
-            <h2 class="section-title">Why Dawn Powerwash Is Different</h2>
-            <div class="insights-container">
-                <div class="insight-card">
-                    <h3 class="insight-title">Not Just Regular Soap in a New Bottle</h3>
-                    <p class="insight-description">Dawn Powerwash is specially formulated to be sprayed directly on dishes, activating instantly without water dilution for superior grease-cutting power.</p>
+            <h2 class="experience-title">What Makes Dawn Powerwash Different</h2>
+            <p class="experience-description">Our innovative spray bottle delivers a targeted formula that starts working instantly, unlike traditional dish soap that needs to be diluted.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3 class="feature-title">Innovative Spray Design</h3>
+                    <p>The continuous spray formula is specifically engineered to cut grease on contact, even on dried-on messes.</p>
                 </div>
                 
-                <div class="insight-card">
-                    <h3 class="insight-title">5X Faster Grease Cutting</h3>
-                    <p class="insight-description">Experience the difference when you use as directed. Our spray formula tackles tough grease in seconds when applied correctly.</p>
+                <div class="feature-card">
+                    <h3 class="feature-title">No Pre-Soaking Required</h3>
+                    <p>Skip the soaking step. Dawn Powerwash works immediately, saving you time and effort.</p>
                 </div>
                 
-                <div class="insight-card">
-                    <h3 class="insight-title">New Method, Better Results</h3>
-                    <p class="insight-description">Unlike traditional dish soap that works with water, Dawn Powerwash is designed to work on contact, changing how you clean dishes for better efficiency.</p>
+                <div class="feature-card">
+                    <h3 class="feature-title">Works Best Dry-to-Wet</h3>
+                    <p>Unlike traditional soap that works with water, Dawn Powerwash activates when sprayed directly on dry dishes.</p>
                 </div>
             </div>
         </div>
@@ -478,21 +433,21 @@
     
     <section class="tips-section">
         <div class="container">
-            <h2 class="section-title">Pro Tips for Best Results</h2>
+            <h2 class="section-title">Customer Discoveries</h2>
             <div class="tip-cards">
                 <div class="tip-card">
-                    <h3 class="tip-title">For Tough Grease</h3>
-                    <p>For extra greasy pots and pans, spray and let sit for 1-2 minutes before wiping to give the powerful formula time to break down stubborn grease.</p>
+                    <h3 class="tip-title">The "Let It Sit" Trick</h3>
+                    <p>For extra stubborn messes, spray and wait 30 seconds before wiping. Customers report this method eliminates the need for scrubbing entirely.</p>
                 </div>
                 
                 <div class="tip-card">
-                    <h3 class="tip-title">Remember: Wipe, Don't Scrub</h3>
-                    <p>Many consumers mistake wiping for scrubbing. Wiping requires gentle, light pressure - let the formula do the work. Scrubbing is not necessary!</p>
+                    <h3 class="tip-title">One-Hand Cleaning</h3>
+                    <p>The continuous spray design means you can clean one-handed – perfect for multitasking in the kitchen or cleaning as you cook.</p>
                 </div>
                 
                 <div class="tip-card">
-                    <h3 class="tip-title">Apply to Dry Dishes First</h3>
-                    <p>Always spray Dawn Powerwash on dry dishes first for maximum effectiveness. The formula works best when not diluted with water initially.</p>
+                    <h3 class="tip-title">Beyond Just Dishes</h3>
+                    <p>Dawn Powerwash isn't just for dishes. Customers love using it on stovetops, counters, and sinks for quick everyday cleanups.</p>
                 </div>
             </div>
         </div>
@@ -500,8 +455,8 @@
     
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Ready to Transform Your Dishwashing Experience?</h2>
-            <a href="#" class="cta-button">Also Find Dawn Powerwash Refils Near You</a>
+            <h2 class="cta-title">Ready to Experience the Difference?</h2>
+            <a href="#" class="cta-button">Find Dawn Powerwash Refills Near You</a>
         </div>
     </section>
 </body>
